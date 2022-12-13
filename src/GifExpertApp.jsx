@@ -5,7 +5,7 @@ import { GifGrid } from "./components/GifGrid";
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState(['hola']);
 
-  const onAddCategory = (NewCategory) => {
+  const onNewCategory = (NewCategory) => {
     if (categories.includes(NewCategory)) {
       return;
     }
@@ -15,7 +15,7 @@ export const GifExpertApp = () => {
   return (
     <>
       <h1>Busca el Gif que más te guste</h1>
-      <AddCategory onNewCategory={onAddCategory} />
+      <AddCategory onNewCategory={onNewCategory} />
         {categories.map((category) => (
           <GifGrid key = {category} category = {category}/>
         ))}
